@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Aquatech</title>
+    <style>
+        body {
+            background-image: url(../static/img/fondo2.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed; /* Fija la imagen de fondo */
+            height: 100vh;
+            position: relative;
+            color: #052C42; /* Color de texto azul */
+            font-family: "Segoe UI";
+            margin: 0; /* Eliminar margen predeterminado del body */
+        }
+
+        .title {
+            margin-left: 60px;
+        }
+
+        .content {
+            margin-top: 130px; /* Mover el contenido hacia abajo */
+            margin-left: 60px;
+            margin-bottom: 130px;
+        }
+
+        .button-container {
+            margin-top: 20px; /* Espacio superior entre los botones y el texto de abajo */
+        }
+
+        .custom-button {
+            display: inline-block; /* Mostrar los botones en línea */
+            font-size: 1rem; /* Tamaño de fuente */
+            padding: 15px 50px; /* Padding para aumentar el tamaño del botón */
+            background-color: #052C42; /* Color de fondo azul */
+            border-color: #052C42; /* Color del borde */
+            color: #ffffff; /* Color de texto blanco */
+            font-family: "Segoe UI";
+            border-radius: 20px;
+            margin-right: 20px; /* Espacio horizontal entre los botones */
+            margin-bottom: 20px; /* Espacio vertical entre los botones */
+            width: 800px; /* Ancho fijo para todos los botones */
+        }
+
+        .navbar {
+            background-color: #052C42; /* Color de fondo del navbar */
+            width: 100%; /* Ancho del navbar al 100% de la ventana */
+            height: 80px; /* Altura del navbar, ajusta según tu preferencia */
+            padding: 10px 0; /* Añade relleno interno para espacio entre el contenido y el borde del navbar */
+            margin: 0; /* Eliminar margen predeterminado del navbar */
+        }
+
+        .navbar-nav .nav-item .nav-link {
+            color: #ffffff; /* Color de texto de los enlaces del navbar */
+        }
+
+        .navbar-nav {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .nav-item {
+            margin-right: 30px; /* Ajusta este valor según tu preferencia */
+        }
+
+        .nav-item:last-child {
+            margin-right: 0; /* Para evitar margen derecho en el último elemento */
+        }
+
+        .text-container {
+            margin-top: 80px; /* Espacio entre el texto y el navbar */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            margin-left: 130px;
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Acuario</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/servicios">Servicios</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Tienda
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <style>
+        /* Estilo para los enlaces */
+        a {
+            color: #052C42; /* Cambia el color del texto a blanco */
+            text-decoration: none; /* Quita el subrayado de los enlaces */
+        }
+    </style>
+    
+    <div class="container text-container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>¿En qué te ayudamos?</h2>
+                <div class="button-container">
+                    <a href="#" class="custom-button">Devoluciones, cancelaciones y reembolsos</a>
+                    <a href="#" class="custom-button">Soporte técnico</a>
+                    <a href="#" class="custom-button">Limpieza de acuario</a>
+                    <a href="#" class="custom-button">Guarderia</a>
+                    <a href="#" class="custom-button">Otros</a>
+                </div>
+                <h2>Contáctenos</h2>
+                <p class="contact-links">
+                    <a href="https://api.whatsapp.com/send?phone=573147045511&text=Hola%20necesito%20ayuda" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1022px-WhatsApp.svg.png" height="25" width="25"> 
+                        Contacto por WhatsApp
+                    </a>
+                    <a href="mailto:info@acuariocalypso.com.co" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" height="25" width="25"> 
+                        info@acuariocalypso.com.co
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    
+
+</body>
+</html>

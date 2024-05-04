@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12 content text-white">
+            <div class="content-container"> <!-- Contenedor blanco -->
+                <form class="form-signin" method="POST">
+                    <h1 class="h3 mb-3 font-weight-normal text-center">Inicia Sesión</h1>
+                    {% if error %}
+                    <div class="alert alert-danger mt-3" role="alert">
+                        {{ error }}
+                    </div>
+                    {% endif %}
+                    <p class="card-text">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <button class="custom-button" type="submit">Iniciar sesión</button>
+                    </p>
+                    <p class="mt-5 mb-3 text-center">¿No tienes cuenta? <a href="../signup/">Crear cuenta</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+

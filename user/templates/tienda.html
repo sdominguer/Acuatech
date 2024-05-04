@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Aquatech
+{% endblock %}
+
+{% block content %}
+    
+<div class="container">
+    <h1 class="text-center mb-4">Productos</h1>
+    <div class="row">
+        {% for product in products %}
+        <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+                <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}">
+                <div class="card-body text-center">
+                    <h5 class="card-title">{{ product.name }}</h5>
+                    <p class="card-text">{{ product.description }}</p>
+                    <p class="card-text">Precio: ${{ product.price }}</p>
+                    <!-- Agregar un atributo data-product-id con el ID del producto -->
+                    <button class="btn btn-primary agregar-al-carrito" data-product-id="{{ product.id }}">Agregar al carrito</button>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<!-- Script para manejar la lógica de agregar productos al carrito -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Obtener todos los botones con la clase agregar-al-carrito
+        var botonesAgregarAlCarrito = document.querySelectorAll('.agregar-al-carrito');
+
+        // Añadir un evento de clic a cada botón
+        botonesAgregarAlCarrito.forEach(function(boton) {
+            boton.addEventListener('click', function() {
+                // Obtener el ID del producto del atributo data-product-id
+                var productoId = boton.getAttribute('data-product-id');
+                
+                // Agregar el ID del producto al carrito
+                var carrito = localStorage.getItem('carrito') ? JSON.parse(localStorage.getItem('carrito')) : {};
+                carrito[productoId] = (carrito[productoId] || 0) + 1;
+                localStorage.setItem('carrito', JSON.stringify(carrito));
+
+                // Mostrar un mensaje de confirmación (opcional)
+                alert('Producto agregado al carrito');
+
+                // Redirigir a la página del carrito (opcional)
+                window.location.href = '/carrito';
+            });
+        });
+    });
+</script>
+
+{% endblock %}
+
+

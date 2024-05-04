@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Aquatech
+{% endblock %}
+
+{% block content %}
+    <div class="content">
+        <h1 style="margin-bottom: 0%;">Armonía en cada Onda:</h1> <!-- Ajuste del margen inferior -->
+        <h1 style="margin-bottom: 0%;">Tu Mundo Acuático,</h1>
+        <h1> Simplificado.</h1>
+    </div>
+
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col-md-4">
+                <div class="card h-100 mx-auto bg-white-transparent">
+                    {% load static %}
+                    <img src="{% static 'img/productos.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h3 class="card-title">Nuestros productos</h3>
+                        <p class="card-text">Tenemos una gran variedad de productos a tu disposición para que adecues y personalices tu acuario dependiendo de tus necesidades y preferencias.</p>
+                        <a href="#" class="custom-button">Visitar tienda</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 mx-auto bg-white-transparent">
+                    <img src="{% static 'img/servicios.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h3 class="card-title">Asesorías</h3>
+                        <p class="card-text">Queremos transmitirte la confianza de poder contar con nosotros todo el tiempo para que disfrutes de la mejor experiencia.</p>
+                        <br>
+                        <a href="#" class="custom-button">Contáctanos</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 mx-auto bg-white-transparent">
+                    <img src="{% static 'img/acuario.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h3>Domótica</h3>
+                        <p>Implementamos una herramienta para que puedas tener control de tu acuario de manera remota todo el tiempo.</p>
+                        <br>
+                        <a href="#" class="custom-button">Mi acuario</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
