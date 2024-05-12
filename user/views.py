@@ -17,6 +17,9 @@ def index(request):
 def usuario(request):
     return render(request, "usuario.html")
 
+def chat(request):
+    return render(request, "chat.html")
+
 
 def signupaccounts(request):
     if request.method == "GET":
